@@ -1,0 +1,100 @@
+@import url('../../.cache/wal/colors-waybar.css');
+
+/**
+ * Global styles.
+ */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'Dank Mono', 'Material Design Icons', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+tooltip {
+  background: @background;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
+/**
+ * Global module styles.
+ */
+#workspaces,
+#pulseaudio,
+#temperature,
+#memory,
+#cpu,
+#clock,
+#battery {
+    background: @background;
+    color: @foreground;
+    padding: 10px 20px;
+}
+
+/**
+ * Sway workspaces.
+ */
+#workspaces {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#workspaces button {
+    padding: 3px 8px;
+    background: transparent;
+    color: @foreground;
+    margin-left: 10px;
+}
+
+#workspaces button:first-child {
+    margin-left: 0;
+}
+
+#workspaces button.focused {
+    background: @foreground;
+    color: @background;
+}
+
+/**
+ * Clock.
+ */
+#clock {
+
+}
+
+/**
+ * Battery.
+ */
+#battery {
+
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}

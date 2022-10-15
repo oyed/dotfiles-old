@@ -1,0 +1,38 @@
+{
+    "layer": "top",
+    "modules-left": ["cpu", "memory", "temperature"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["pulseaudio", "battery", "clock"],
+    "fixed-center": true,
+    "output": ["eDP-1"],
+    "margin-right": 20,
+    "margin-left": 20,
+    "margin-top": 20,
+    "spacing": 20,
+    "sway/workspaces": {
+        "all-outputs": true
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "clock": {
+        "interval": 1,
+        "format": "󰅐 {:%H:%M:%S}"
+    },
+    "cpu": {
+        "format": "󰘚 {usage}%"
+    },
+    "memory": {
+        "format": "󰍛 {percentage}%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 muted",
+        "format-source-muted": "󰝟 muted",
+        "format-icons": ["󰕿", "󰖀", "󰕾"]
+    },
+    "temperature": {
+        "format": "󰔏 {temperatureC}°C"
+    }
+}
