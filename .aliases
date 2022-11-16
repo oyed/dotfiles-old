@@ -2,11 +2,12 @@
 alias ls="ls -la"
 alias editalias="nano ~/.aliases"
 alias reloadalias="source ~/.zshrc"
-alias fetch="neofetch"
+alias fetch="macchina"
 alias mixer="ncpamixer"
 
 # Sites/Work.
 alias vc-site="code ~/sites/videocom/site && exit"
 alias vc-presenter="code ~/sites/videocom/presenter && exit"
+alias vc-demo="code ~/sites/videocom/demo && exit"
 alias teris="code ~/sites/teris && exit"
 alias places="code ~/sites/places && exit"

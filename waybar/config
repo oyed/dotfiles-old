@@ -13,6 +13,7 @@
         "all-outputs": true
     },
     "battery": {
+        "full-at": 50,
         "format": "{icon} {capacity}%",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },

@@ -16,6 +16,9 @@ set $right Right
 # The application launcher to use.
 set $menu wofi -i --show drun | xargs swaymsg exec
 
+# Set the screenshot utility.
+set $screenshot grim -g "$(slurp)" $(xdg-user-dir PICTURES)/screenshots/$(date +'%d-%m-%Y-%X.png')
+
 ######################
 # Keyboard Shortcuts #
 ######################
@@ -25,6 +28,9 @@ bindsym $mod+Return exec MESA_LOADER_DRIVER_OVERRIDE=radeonsi __EGL_VENDOR_LIBRA
 
 # Killing the focussed window.
 bindsym $mod+q kill
+
+# Screenshots.
+bindsym $mod+x exec $screenshot
 
 # Running the application launcher.
 bindsym $mod+d exec $menu
@@ -167,11 +173,14 @@ gaps outer 0
 # Make sure kanshi launches with sway.
 exec_always "pkill kanshi; kanshi"
 
+# Make sure Mako launches as needed.
+exec_always "$HOME/.config/mako/launch.sh"
+
 # Generic applications.
 exec "wal -R"
 exec discord
 exec spotify
-exec slack
+exec slack --enable-features=WebRTCPipeWireCapturer # Feature flag allows screen sharing in Wayland
 
 ######################
 #       Misc.        #
